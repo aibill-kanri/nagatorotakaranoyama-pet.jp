@@ -1,0 +1,15 @@
+Options +Includes
+AddHandler server-parsed html
+ErrorDocument 404 /404.html
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.nagatorotakaranoyama-pet.jp
+RewriteRule ^(.*)$ https://nagatorotakaranoyama-pet.jp/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://nagatorotakaranoyama-pet.jp/$1 [R=301,L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+

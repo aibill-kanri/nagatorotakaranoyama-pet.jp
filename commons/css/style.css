@@ -1,0 +1,884 @@
+@charset "utf-8";
+
+/* ShipporiMincho-Regular */
+@font-face {
+	font-family: 'ShipporiMincho';
+	font-weight:400;
+	font-style:normal;
+	src: url('/commons/webfonts/ShipporiMincho-Regular.woff2') format('woff2'),
+	url('/commons/webfonts/ShipporiMincho-Regular.ttf') format('truetype'); 
+	font-display: swap;
+}
+/* ShipporiMincho-Bold */
+@font-face {
+	font-family: 'ShipporiMincho';
+	font-weight:700;
+	font-style:normal;
+	src: url('/commons/webfonts/ShipporiMincho-Bold.woff2') format('woff2'),
+	url('/commons/webfonts/ShipporiMincho-Bold.ttf') format('truetype');
+	font-display: swap;
+}
+/* ShipporiMincho-ExtraBold */
+@font-face {
+	font-family: 'ShipporiMincho';
+	font-weight:900;
+	font-style:normal;
+	src: url('/commons/webfonts/ShipporiMincho-ExtraBold.woff2') format('woff2'),
+	url('/commons/webfonts/ShipporiMincho-ExtraBold.ttf') format('truetype');
+	font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+	font-size: 16px;
+	font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+	color: #5F6C75;
+	line-height: 1.2;
+	text-align: left;
+	padding-top: 0;
+	letter-spacing: 0.05em;
+}
+
+h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,dt,th {
+	font-family: 'ShipporiMincho',"Arial","sans-serif";
+	font-weight:bold;
+}
+
+
+
+a {
+	font-weight:bold;
+	color: #5F6C75;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+
+a:hover {color:#3d8f7a;}
+
+a img {border: 0;}
+
+a:hover img {
+	opacity:0.8;
+	filter: alpha(opacity=80);
+	-ms-filter: "alpha( opacity=80 )";
+}
+
+
+
+
+
+
+i {text-decoration: none;}
+
+.innr {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+/*ボタン*/
+.btn a {
+	box-sizing: border-box;
+	background-color: #5EC2DD;
+	text-align: center;
+	font-family: 'ShipporiMincho',"Arial","sans-serif";
+	font-weight:700;
+	border-radius: 1.25em;
+	padding: .5em 1em;
+	display: block;
+	color: #FFF;
+	line-height:1.1em;
+	font-size:18px;
+	border:2px solid #5EC2DD;
+	width:50%;
+	height:2.5em;
+	margin:0 auto;
+}
+.btn a:hover {color:#5EC2DD;background-color: #FFF;}
+
+.w-100 a {width:100%;}
+.w-90 a {width:90%; margin:0 auto;}
+
+summary {
+	list-style: none;
+}
+summary::-webkit-details-marker {
+  display:none;
+}
+
+@media screen and (min-width:769px) {
+.only-sp {
+	display: none !important;
+}
+a[href^="tel:"] {
+    pointer-events: none;
+}
+}
+
+@media screen and (max-width:768px) {
+	body {
+	font-size: 14px;
+	}
+.only-pc {
+	display: none !important;
+}
+
+/*ボタン*/
+.btn a {width:100%; font-size:16px;}
+
+}
+
+
+
+@media screen and (max-width:768px) {
+#header {
+	position: fixed;
+	z-index: 10;
+}
+
+#header-contact span{
+    display: none;
+}
+
+
+	
+}
+
+@media screen and (max-width:480px) {
+.logo img {
+	top:5px;
+	width:50%;
+	height:auto;
+}
+
+#header-contact i{
+	margin:0.5em 0;
+}
+
+}
+
+/*contents
+========================================*/
+
+section{
+	padding-bottom:60px;
+}
+
+.in section{
+	padding:60px 0;
+}
+
+
+
+
+
+
+/*h1*/
+
+
+.in .h1_head {
+	padding:240px 0 105px 0;
+	background-size:cover;
+	background-position:center center;
+	background-color:rgba(255,255,255,0.3);
+	background-blend-mode:lighten;
+}
+
+.h1_head h1{
+	color: #5F6C75;
+	text-shadow:0 0 10px #fff;
+	background-color:rgba(255,255,255,0.8);
+	padding-bottom: 0.1em;
+	letter-spacing: 0.1em;
+}
+
+
+/*in h1 bg*/
+.h1_head  {background-image:url(/commons/img/in_bg.jpg);}
+
+
+
+
+
+
+.in h1{
+	font-size:48px;
+	font-weight:bold;
+	text-align: center;
+	color:#5F6C75;
+}
+
+
+
+main h2{
+	font-size:42px;
+	margin-bottom:1em;
+	font-weight:bold;
+	text-align: center;
+	color:#5F6C75;
+}
+main h2::before {content:url("/commons/img/icon.svg");display: block;}
+main h2.icon_grn::before {content:url("/commons/img/icon_grn.svg");display: block;}
+main h2.icon_w::before {content:url("/commons/img/icon_w.svg");display: block;}
+
+main h2 span {
+	display:block;
+	font-size:0.5em;
+	padding-top:0.5em;
+	letter-spacing:0.2em;
+}
+
+
+main h3 {
+	font-size: 32px;
+	margin-bottom:1em;
+	font-weight: bold;
+	color:#3d8f7a;
+}
+
+main h4{
+	font-size: 22px;
+	margin-bottom:0.5em;
+	font-weight: bold;
+	color:#3d8f7a;
+}
+main h5{
+	font-size: 20px;
+	margin-bottom:0.5em;
+	font-weight: bold;
+	color:#E07A84;
+}
+
+main h6{ padding:2 0;}
+
+main p {line-height:1.7; margin-bottom:0.5em;}
+
+/*中ページ*/
+
+.in h4{margin:0.5em 0;}
+.in h5,.in h6{margin:0.5em 0;}
+
+
+
+
+
+
+
+/*style*/
+
+.lead {
+	font-size:1.2em;
+	line-height:1.75em;
+}
+
+.freame{
+	border-radius: 30px; padding:20px;}
+
+.img_freame {
+	border:solid 5px #fff;
+}
+	
+
+.ph_circle {
+	border-radius:50%;
+}
+
+.box li {padding-bottom:1em;}
+.box li div {margin:0.5em; padding:1em; background-color:#fff; border-radius:10px; height:100%;box-sizing: border-box;  }
+.box li div h3 { border:none; text-align:center; margin-top:0.5em; padding:0;}
+.box li div p {line-height:1.5; font-size:0.95em; margin-top:1em;}
+
+
+
+table.table,.table td,.table th {
+    border-collapse: collapse;
+    border:1px solid #F5F3ED;
+	padding:5px;
+	font-size:1em;
+	background-color:#fff;
+    }
+
+.table th {background-color:#ede7dd;}
+.table th span { font-size:0.9em; font-weight:normal;display: inline-block;}
+
+table.houyou-table,
+table.houyou-table th,
+table.houyou-table td {
+    text-align: center;
+}
+table.houyou-table td:nth-child(1) {
+    text-align: left;   
+}
+
+
+.d-ib {display: inline-block;}
+
+@media screen and (max-width:1024px) {
+	.table td,.table th {font-size:0.8em;}
+}
+
+
+@media screen and (max-width:768px) {
+.contents {
+	position: relative;
+	top: 58px;
+}
+
+section{
+	padding-bottom:40px;
+}
+
+.in section{
+	padding:40px 0;
+}
+
+
+
+main h1,.in h1{
+	font-size: 26px;
+	margin-bottom:20px;
+}
+main h2{
+	font-size: 20px;
+    margin-bottom:30px;
+}
+
+
+main h2::before {content:url("/commons/img/icon_sp.svg");display: block;}
+main h2.icon_grn::before {content:url("/commons/img/icon_grn_sp.svg");display: block;}
+main h2.icon_w::before {content:url("/commons/img/icon_w_sp.svg");display: block;}
+
+
+main h3{
+	font-size: 18px;
+	margin-bottom:20px;
+}
+
+main h4,main h5{
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+
+
+main p {
+	margin-bottom: 20px;
+}
+
+
+
+/*in h1 bg*/
+.h1_head  {background-image:url(/commons/img/in_bg_sp.jpg);}
+.h1_head h1{ margin-top:20px;}
+
+
+
+/*style*/
+
+.freame{
+  border-radius: 15px;
+  padding: 1.5em;
+  outline-offset:-10px;
+}
+
+.img_freame {
+	border:solid 2px #fff;
+	box-shadow: 0px 0px 4px -2px #c7c7c7;
+	border-radius: 0px;
+}
+
+.img_sp100 { width:100%; height:auto;}
+
+}	
+
+
+/*Top*/
+
+.top section{
+	padding:60px 0;
+}
+
+
+
+
+/*top スライド　swiper*/
+
+
+
+.swiper-slide img{
+	padding-top:140px;
+	width:100vw;
+	height:600px;
+	object-fit: cover;
+}
+
+.swiper-slide {
+	position: relative;
+}
+.swiper-slide p{
+	position: absolute;
+	bottom:0;
+	background-color:rgba(255,255,255,0.5);
+	color:#5F6C75;
+	padding:0.5em 2em;
+	font-size:30px;
+	font-family: 'm-plus-rounded';
+	font-weight:700;
+	line-height:2.5;
+	margin-bottom:1em;
+}
+
+.swiper-button-next {
+	right:0;
+}
+
+@media screen and (max-width:768px) {	
+
+/*top スライド　swiper*/
+
+.swiper-slide img{
+	padding-top:0px;
+	height:400px;
+}
+.swiper-slide p{
+	padding:0.5em 1em;
+	font-size:18px;
+	line-height:1.5;
+	margin-bottom:4px;
+}
+}
+
+
+
+/*liの内側にピンクの線を引く---*/
+ul.in-line li {
+	box-sizing: border-box;
+	background-color:#fff;
+	padding: 4px;
+	border: 2px solid #E07A84;
+}
+
+
+
+
+
+
+
+
+/*petがなくなったら---*/
+#pet h3 {color:#5F6C75;padding:0.5em; text-align:center; font-size:22px;}
+#pet h3 span {background-color:#CFECC4; display:block; padding-top:0.7em; width:2.7em; height:2em; margin:0 auto 5px auto; border-radius:50%;}
+
+
+
+/*葬儀の流れ---*/
+.nagare li {
+  position: relative;
+  display: block;
+  margin:0 0 1em 0;
+  padding: 7px 10px;
+  max-width: 100%;
+  font-size:18px;
+  background: #F5F3ED;
+  text-align:center;
+  font-family: 'm-plus-rounded',"serif";
+  font-weight:400;
+  border-radius: 10px;
+}
+
+.nagare li:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #F5F3ED;
+
+}
+
+.nagare li:last-child:before { display:none;}
+#flow h3 {color:#5F6C75;padding:0.5em; text-align:center; font-size:22px; margin-bottom:0;}
+#flow h3 span {background-color:#87C16F; display:block; padding-top:0.7em; width:2.7em; height:2em; margin:0 auto 5px auto; border-radius:50%; color:#fff;}
+#flow .flow_list li { width:49%; margin:0 0.5% 1% 0.5%; border:4px solid #CFECC4;box-sizing: border-box;}
+
+
+/*ペット火葬プランと料金---*/
+#plan h4 {padding:10px;margin-bottom:0;margin-top:0; text-align:center;}
+#plan h4 span {font-size:0.6em; margin-left:1em; background-color:#e7ca3f; padding:1px 5px;	margin-bottom:0px;}
+#plan h6 { padding:2px; background-color:#5F6C75; margin-bottom:0px;}
+#plan li.flex_w33 div.btn {margin-top: auto; padding:1em;}
+.ph_ontxt img {width:100%;height:auto;}
+.ph_ontxt {position:relative;}
+.ph_ontxt h5 {
+    position: absolute;
+	bottom: 0;
+	width:100%;
+	padding:10px 0px;
+	color:#5F6C75;
+	background-color:rgba(255,255,255,0.8);
+	font-size:18px;
+	font-family: 'm-plus-rounded';
+	font-weight:700;
+	margin-bottom:0;
+	text-align: center;
+	line-height: 1;
+}
+.ph_ontxt p span {
+	font-size: 0.8em;
+	display: inline-block;
+}
+
+#plan dl, dl.list {display:flex;flex-direction: row;flex-wrap: wrap;align-content:stretch;}
+#plan dt, dl.list dt {width:20%; font-size:1.1em; text-align:center; border-top:2px solid #88bcee; padding-top:2px;}
+#plan dd, dl.list dd {width:80%; margin-bottom:1em;border-top:2px solid #88bcee; padding-top:3px;}
+
+
+
+
+#plan .nagare li {
+  position: relative;
+  display: block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #FFF;
+  font-size:18px;
+  background: #88bcee;
+  text-align:center;
+    	font-family: 'm-plus-rounded',"serif";
+	font-weight:700;
+	border-radius: 10px;
+}
+
+#plan .nagare li:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #88bcee;
+
+}
+
+/*エリア---*/
+#area dt { color:#E07A84; font-size:1.2em; margin-bottom:0.2em;}
+#area dd {margin-bottom:1em; line-height:1.3;}
+#area dd a {display:inline-block;}
+
+
+
+
+
+/*葬儀・火葬施設---*/
+#facility .freame li h5 { padding:2px; border:1px solid #fff;}
+#facility .freame li h5 a { padding:2px;color:#fff; display:block;}
+#facility .freame li h5 a:hover { color:#df827c; background-color:#FFF;}
+#facility #list li { width:19%;margin-right:1%;}
+#facility #list h6 span,#facility .area h6 span {margin-right:0.5em;}
+
+
+
+/*よくある質問---*/
+
+details {transition: 0.5s;}
+
+details {
+  transition: 0.5s;
+  margin-bottom:0.5em;
+  padding:0.5em;
+  background-color:#fff;
+}
+details[open] { background: #FFF;}
+
+details p {
+	padding:0.5em 0 0.5em 30px;
+	border-top:1px solid #87C16F;
+}
+
+summary {
+	border-left: 10px solid #87C16F;
+	padding:10px 20px;
+	text-align:left;
+	font-size:1.2em;
+	background-color:#fff;
+	font-weight: bold;
+	}
+
+
+
+	
+/*NEWS・会社概要---*/
+
+#news dd img { padding:0 0 1em 1em; height:150px; width:auto;}
+#news dt {
+ padding:1em 0;
+ border-top:2px solid #3d8f7a;
+ font-size:1.2em;}		
+#news dt span {margin-right:1em;}
+#company dl.list dt {text-align:left;}
+#company dl.list dt,#company dl.list dd { border-color:#3d8f7a; padding:0.5em 0;}
+#link h5 { border-left:4px solid #3d8f7a; padding:0 0.5em}
+#link p {padding:0 3em 1em 0; font-size:0.9em;}
+
+
+/*エリアページ　7つの特徴---*/
+
+#facility  #features h4{color:#5F6C75; }
+#facility  #features p {background-color:#FAECEB;}
+#facility  #features p.txt_circle {background-color:#df827c;color:#FFF;padding:0; margin: auto;}
+#facility  #features .style01,#facility  #features .style02 {border:5px solid #FFF;}
+#facility .area h6{
+	font-size: 24px;
+	margin-bottom:0.5em;
+	font-weight: bold;
+	color:#df827c;
+}
+
+
+/*エリアページ　プラン---*/
+#area #plan h4 {background-color:#E07A84; color:#fff;}
+#area #plan ul.in-line li {border: 4px solid #fff;}
+#area #plan li.flex_w33 p { padding:0 1em}
+
+}
+
+@media screen and (max-width:1024px) {
+#scene > .flex_wrap li{
+    width:24.25%;
+}
+}
+@media screen and (max-width:768px) {	
+
+
+.top .h1_head,.in .h1_head {
+	padding:1em 0;
+}
+
+
+.h1_head h1 span {
+	font-size:0.8em;
+	padding:0 0.5em;
+	line-height:1;
+}
+.top h1 img{
+	width:90%;
+	height:auto;
+}
+
+.top section{
+    padding:40px 0;
+}
+.top h2{
+	font-size: 26px;
+    margin-bottom:20px;
+}
+
+
+/*特色---*/
+
+#features li.flex_w25{border:0px; width:100%;margin-bottom:1em;}
+#features li{background-size:50%;}
+#features h3{ padding:0.5em; height:3em;}
+
+
+/*petがなくなったら---*/
+#pet ul.flex_25_ul li {width:100%; margin-right:0;}
+#pet h3 {padding:0.25em; font-size:16px;}
+
+
+	
+	
+/*ペット火葬プランと料金---*/
+
+#plan li.flex_w33,#plan li.flex_w25 {
+	border:0px; width:100%;
+	margin-bottom:2em;}
+	
+#plan li.flex_w33 p {height: auto}
+
+.ph_ontxt h5 {
+	padding:5px 0px;
+	font-size:14px;
+	margin-bottom:0px;
+	line-height: 1;
+}
+
+#plan dt,#plan dd,dl.list dt,dl.list dd {width:100%;}
+
+/*エリア---*/
+.top #area img {width:50%; height:auto; margin:0 25%;}
+
+
+/*葬儀・火葬施設---*/
+#facility .freame ul {display:flex;flex-direction:row;height:auto;}
+#facility .freame li { width:100%; margin-right:0%;}
+#facility #list li { width:48%;margin:1%;}
+#facility #list li p {font-size:0.8em;}
+
+
+
+/*お客様の声---*/	
+#voice .flex_33_ul li img {width:98%; margin:0 1%;}
+	
+
+/*会社概要---*/	
+#link p {padding:0;}
+
+}
+
+
+
+
+/*footer
+========================================*/
+
+
+
+#footer {
+	text-align: center;
+
+}
+
+#footer div.innr {
+
+	width:100%;
+}
+#footer .btn li{display: inline-block;}
+
+#footer .btn a{
+	font-size:0.8em;
+	padding:0.5em;
+	margin: 0.5em auto;
+}
+#footer .copy{font-size:0.7em; padding: 0.5em;}
+
+#footer .adress {text-align:left;line-height:1.5em; padding-bottom:1em;}
+#footer .adress span{ margin-right:1em; display:inline-block; }
+
+
+#pagetop {
+	display: none;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+	line-height: 60px;
+	border-radius:50%;
+	text-align: center;
+	cursor: pointer;
+	z-index: 100;
+	background-color: #5F6C75;
+	align-items: center;
+    justify-content: center;
+}
+#pagetop i {
+	color: #FFF;
+	font-size: 20px;
+}
+#pagetop:hover {
+	background-color: #5EC2DD;
+}
+
+.footer_tel,.footer_contact {
+	display:none;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+#footer .adress { padding:0 1em 1em 1em;}
+#footer .btn a{ width:90%;}
+/*bnr*/
+#footer .bnr img{width: 90%; height: auto; padding: 5%;}
+
+
+
+#pagetop {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 10%;
+	height: 40px;
+	line-height: 60px;
+	border-radius:0;
+	text-align: center;
+	cursor: pointer;
+	z-index: 100;
+	background-color: #E07A84;
+	align-items: center;
+    justify-content: center;
+}
+.footer_tel,.footer_contact {
+	display:block;
+	position:fixed;
+	bottom:0;
+	text-align:center;
+	font-size:16px;
+	background:#F9D7DF;
+	margin:0;
+	width: 90%;
+	height: 40px;
+	line-height: 40px;
+}
+	
+	
+.footer_contact	{
+	right: 10%;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+
+}
+
+
+.footer_tel i,.footer_contact i{
+	color:#FFF;
+	margin-right:10px;
+}
+
+.footer_tel a,.footer_contact a {
+	color:#FFF;
+	font-family: 'ShipporiMincho',"Arial","sans-serif";
+	font-weight:700;
+}
+	
+	
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

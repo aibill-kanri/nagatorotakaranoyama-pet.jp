@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*header
+========================================*/
+
+#header {
+	width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 980;
+  background-color:#fff;
+}
+#header .innr {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+#header a,.logo p {font-family: 'm-plus-rounded',"serif";font-weight:400;}
+
+.logo {
+	width:100%;
+	text-align:left;
+}
+
+
+	
+.logo img {
+	padding-left:20px;
+	width: auto;
+	height:100px;
+	float:left;
+}
+
+.logo h1,.logo p {
+	padding:10px 0;
+	font-size:54px;
+	color:#5F6C75;
+	font-weight:700;
+	}
+
+
+.logo h1 span,.logo p span {
+	display:block;
+	font-size:14px;
+	color:#3d8f7a;}
+
+.tel a {color:#5F6C75; font-size:42px;display:block;font-family: 'm-plus-rounded',"serif";font-weight:400;}
+.tel span {font-size:16px; display:block;}
+.tel i {margin-right:5px; font-size:38px;}
+.tel .contact {
+	padding:6px 10px;
+	text-align:center;
+	color:#fff;
+	background-color:#E07A84;
+}
+
+
+nav.gnav {margin-top:10px;}
+
+.gnav ul {
+	width: 100%;
+	margin:0 auto;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center; 
+	background-color:#87C16F;
+	padding:3px 1%;
+}
+.gnav > ul > li{
+    width: auto;
+	box-sizing:border-box;
+}
+.gnav > ul > li > a {
+	font-size:14px;
+	color: #FFF;
+	display: block;
+	text-align: center;
+	box-sizing: border-box;
+	margin:3px;
+	padding:1px 10px;
+}
+
+.gnav ul li a:hover {
+	color: #87C16F;
+		background: rgba(255,255,255,0.95);
+}
+
+
+
+
+@media screen and (max-width:1280px) {
+
+.tel a {font-size:34px;}
+.tel span {font-size:12px;}
+.tel i {font-size:30px;}
+
+
+}
+
+@media screen and (max-width:768px) {
+	
+#header {
+  width: 100%;
+	height: 58px;
+  position: fixed;
+  border:0px;
+}
+
+
+
+.page #header{
+	display:block;
+}
+
+.logo {
+	width:100%; text-align:left;
+}
+
+.logo h1,.logo p {
+	padding:10px 0;font-size:20px;}
+	
+.logo img {
+	padding-left:10px;
+	width: auto;
+	height:50px;
+}
+
+
+
+.logo h1 span,.logo p span {
+	display:block;
+	font-size:10px;}
+
+
+
+#header .contact {
+	margin:0 2em 0.5em 1em;
+	padding-top:1px;
+	height:20px;
+	width:90%;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+	background-color:#e48198;
+	border-radius:12px;
+}
+
+#header .contact i,#header .contact span {
+	font-size:10px;
+}
+
+
+
+
+
+
+
+/*menu*/
+#menu {
+	list-style-type : none;
+	position : absolute;
+	position: fixed;
+	left : 0px;
+	top : 0px;
+	z-index : 990;
+	display : none;
+	box-sizing: border-box;
+	width:100%;
+	border-left: 0px;
+	height: calc(auto - 60px);
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	background-color:rgba(130,198,23,0.95);
+
+}
+
+#menu li {
+	display: block;
+	width:100%;
+	border-right:0px;
+	height:auto;
+	margin-bottom:2px;
+}
+
+#menu li a {
+
+	text-decoration: none;
+    width: 98%;
+    display: block;
+	padding: 10px 3%;
+    box-sizing: border-box;
+    height: auto;
+    text-align: left;
+    line-height: 1.5;
+	font-size:12px;
+	color:#FFF;
+}
+#menu li a:before{
+	content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    margin-right: 0.5em;
+	color:#5F6C75;
+}
+#menu li a:hover{
+	opacity: 1;	
+}
+
+#menu li a:hover {
+	color: #87C16F;
+	background: rgba(255,255,255,0.95);
+}
+
+
+.gnav > ul > li > a {
+	margin:0 3px 3px 0;
+}
+
+
+div#sp-icon {
+	z-index : 999;
+	width: 25px;
+    height: 58px;
+	position : absolute;
+    right: 5px;
+    top: 0px;
+    padding: 0 12px;
+}
+
+div#sp-icon span,
+div#sp-icon span:before,
+div#sp-icon span:after {
+	display : inline-block;
+	width : 30px;
+	height : 3px;
+	background : #E89949;
+	transition-property : transform;
+	transition-duration : 0.3s;
+}
+
+div#sp-icon span {
+	position : absolute;
+	left : 50%;
+	top : 50%;
+	transform : translate( -50%, -50% );
+}
+
+div#sp-icon span:before {
+	content : "";
+	position : absolute;
+	transform : translateY( -10px ) rotate( 0deg );
+}
+
+div#sp-icon span:after {
+	content : "";
+	position : absolute;
+	transform : translateY( 10px ) rotate( 0deg );
+}
+
+
+div.sp-close span {
+	background : transparent !important;
+}
+
+div.sp-close span:before {
+	transform : rotate( 45deg ) !important;
+}
+
+div.sp-close span:after {
+	transform : rotate( -45deg ) !important;
+}
+}
