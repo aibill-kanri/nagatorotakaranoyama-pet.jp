@@ -44,7 +44,7 @@ html {
 
 body {
 	font-size: 16px;
-	font-family: "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+	font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
 	color: #5F6C75;
 	line-height: 1.2;
 	text-align: left;
@@ -219,24 +219,36 @@ section{
 
 
 .in h1{
-	font-size:48px;
-	font-weight:bold;
-	text-align: center;
-	color:#5F6C75;
-}
-
-
-
-main h2{
 	font-size:42px;
-	margin-bottom:1em;
 	font-weight:bold;
 	text-align: center;
 	color:#5F6C75;
 }
-main h2::before {content:url("/commons/img/icon.svg");display: block;}
-main h2.icon_grn::before {content:url("/commons/img/icon_grn.svg");display: block;}
-main h2.icon_w::before {content:url("/commons/img/icon_w.svg");display: block;}
+
+
+
+
+
+main h2 {
+  position: relative;
+  text-align: center;       /* 見出し中央寄せ */
+  font-family: 'Shippori Mincho', serif;
+  font-size: 38px;
+  margin: 2em 0;            /* 上下の余白 */
+  color:#5F6C75;
+	font-weight: 900;
+}
+
+main h2::before,
+main h2::after {
+  content: "";
+  display: block;
+  width: 50px;              /* ラインの長さ */
+  height: 3px;              /* ラインの太さ */
+  background-color: #5EC2DD;   /* ラインの色 */
+  margin: 30px auto;         /* 見出し上下の間隔と中央寄せ */
+}
+
 
 main h2 span {
 	display:block;
@@ -361,10 +373,6 @@ main h2{
 }
 
 
-main h2::before {content:url("/commons/img/icon_sp.svg");display: block;}
-main h2.icon_grn::before {content:url("/commons/img/icon_grn_sp.svg");display: block;}
-main h2.icon_w::before {content:url("/commons/img/icon_w_sp.svg");display: block;}
-
 
 main h3{
 	font-size: 18px;
@@ -440,7 +448,7 @@ main p {
 	color:#5F6C75;
 	padding:0.5em 2em;
 	font-size:30px;
-	font-family: 'm-plus-rounded';
+	font-family: 'ShipporiMincho';
 	font-weight:700;
 	line-height:2.5;
 	margin-bottom:1em;
