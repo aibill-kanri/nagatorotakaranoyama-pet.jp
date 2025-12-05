@@ -12,19 +12,12 @@
   z-index: 980;
   background-color:#fff;
 }
-#header .innr {
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 
-}
-#header a,.logo p {font-family: 'm-plus-rounded',"serif";font-weight:400;}
+#header ul.flex_container,#footer ul.flex_container {margin:0 5%;padding:15px 0;}
 
-.logo {
-	width:100%;
-	text-align:left;
-}
+#header a,#footer {font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:400;}
+
+.logo {width:100%;text-align:left;}
 
 
 	
@@ -35,20 +28,12 @@
 	float:left;
 }
 
-.logo h1,.logo p {
-	padding:10px 0;
-	font-size:54px;
-	color:#5F6C75;
-	font-weight:700;
-	}
+.logo h1 {font-size:54px;color:#5F6C75;font-weight:400;}
 
 
-.logo h1 span,.logo p span {
-	display:block;
-	font-size:14px;
-	color:#3d8f7a;}
+.logo h1 span {display:block;font-size:14px;color:#3d8f7a; margin:0 0 0.5em 1em;}
 
-.tel a {color:#5F6C75; font-size:42px;display:block;font-family: 'm-plus-rounded',"serif";font-weight:400;}
+.tel a {color:#5F6C75; font-size:42px;display:block;font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:400; margin-bottom:0.1em;}
 .tel span {font-size:16px; display:block;}
 .tel i {margin-right:5px; font-size:38px;}
 .tel .contact {
@@ -75,7 +60,7 @@ nav.gnav {margin-top:10px;}
 	box-sizing:border-box;
 }
 .gnav > ul > li > a {
-	font-size:14px;
+	font-size:16px;
 	color: #FFF;
 	display: block;
 	text-align: center;
@@ -110,7 +95,7 @@ nav.gnav {margin-top:10px;}
   border:0px;
 }
 
-
+#header ul.flex_container {margin:0;padding:0 0 0 0.5em;}
 
 .page #header{
 	display:block;
@@ -120,7 +105,7 @@ nav.gnav {margin-top:10px;}
 	width:100%; text-align:left;
 }
 
-.logo h1,.logo p {
+.logo h1 {
 	padding:10px 0;font-size:20px;}
 	
 .logo img {
@@ -131,9 +116,10 @@ nav.gnav {margin-top:10px;}
 
 
 
-.logo h1 span,.logo p span {
+.logo h1 span {
 	display:block;
-	font-size:10px;}
+	font-size:9px;
+	margin:0 0 2px 2px;}
 
 
 
@@ -189,7 +175,7 @@ nav.gnav {margin-top:10px;}
 #menu li a {
 
 	text-decoration: none;
-    width: 98%;
+    width: 100%;
     display: block;
 	padding: 10px 3%;
     box-sizing: border-box;
@@ -237,7 +223,7 @@ div#sp-icon span:after {
 	display : inline-block;
 	width : 30px;
 	height : 3px;
-	background : #E89949;
+	background : #87C16F;
 	transition-property : transform;
 	transition-duration : 0.3s;
 }

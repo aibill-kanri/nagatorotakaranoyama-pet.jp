@@ -52,9 +52,9 @@ body {
 	letter-spacing: 0.05em;
 }
 
-h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,dt,th {
+h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,dt,th,.lead {
 	font-family: 'ShipporiMincho',"Arial","sans-serif";
-	font-weight:bold;
+	font-weight:400;
 }
 
 
@@ -70,7 +70,7 @@ a {
 }
 
 
-a:hover {color:#3d8f7a;}
+a:hover {color:#5EC2DD;}
 
 a img {border: 0;}
 
@@ -211,7 +211,7 @@ section{
 
 
 /*in h1 bg*/
-.h1_head  {background-image:url(/commons/img/in_bg.jpg);}
+.h1_head  {background-image:url(/commons/img/top_02.jpg);}
 
 
 
@@ -233,18 +233,18 @@ main h2 {
   position: relative;
   text-align: center;       /* 見出し中央寄せ */
   font-family: 'Shippori Mincho', serif;
-  font-size: 38px;
-  margin: 2em 0;            /* 上下の余白 */
+  font-size: 42px;
+  margin:1em 0 2em 0;            /* 上下の余白 */
   color:#5F6C75;
-	font-weight: 900;
+	font-weight: 400;
 }
 
 main h2::before,
 main h2::after {
   content: "";
   display: block;
-  width: 50px;              /* ラインの長さ */
-  height: 3px;              /* ラインの太さ */
+  width: 50%;              /* ラインの長さ */
+  height: 2px;              /* ラインの太さ */
   background-color: #5EC2DD;   /* ラインの色 */
   margin: 30px auto;         /* 見出し上下の間隔と中央寄せ */
 }
@@ -253,28 +253,43 @@ main h2::after {
 main h2 span {
 	display:block;
 	font-size:0.5em;
-	padding-top:0.5em;
+	padding-top:1em;
 	letter-spacing:0.2em;
 }
+
+
+
+main .bg_beige h2::before,
+main .bg_beige h2::after {background-color: #87C16F;   /* ラインの色 */}
+main .bg_beige .box li div {background-color:#fff;}
 
 
 main h3 {
 	font-size: 32px;
 	margin-bottom:1em;
-	font-weight: bold;
-	color:#3d8f7a;
+	font-weight: 400;
+	color:#5F6C75;
 }
 
 main h4{
+	font-size: 24px;
+	margin-bottom:0.5em;
+	font-weight:400;
+	color:#5F6C75;
+	border-left:5px solid #5EC2DD;
+	padding:0.25em 0 0.25em 0.5em;
+	text-align:left;
+}
+
+main .bg_beige h4 { border-color:#87C16F;}
+
+
+main h4 span{font-size:0.6em;}
+
+
+main h5{
 	font-size: 22px;
 	margin-bottom:0.5em;
-	font-weight: bold;
-	color:#3d8f7a;
-}
-main h5{
-	font-size: 20px;
-	margin-bottom:0.5em;
-	font-weight: bold;
 	color:#E07A84;
 }
 
@@ -301,7 +316,7 @@ main p {line-height:1.7; margin-bottom:0.5em;}
 }
 
 .freame{
-	border-radius: 30px; padding:20px;}
+	border-radius: 10px; padding:1.5em;}
 
 .img_freame {
 	border:solid 5px #fff;
@@ -313,8 +328,7 @@ main p {line-height:1.7; margin-bottom:0.5em;}
 }
 
 .box li {padding-bottom:1em;}
-.box li div {margin:0.5em; padding:1em; background-color:#fff; border-radius:10px; height:100%;box-sizing: border-box;  }
-.box li div h3 { border:none; text-align:center; margin-top:0.5em; padding:0;}
+.box li div {padding:1.5em; background-color:#F5F3ED; border-radius:10px; height:100%;box-sizing: border-box;  }
 .box li div p {line-height:1.5; font-size:0.95em; margin-top:1em;}
 
 
@@ -369,7 +383,6 @@ main h1,.in h1{
 }
 main h2{
 	font-size: 20px;
-    margin-bottom:30px;
 }
 
 
@@ -380,9 +393,8 @@ main h3{
 }
 
 main h4,main h5{
-	font-size: 16px;
+	font-size: 18px;
 	margin-bottom: 10px;
-	font-weight: bold;
 }
 
 
@@ -476,13 +488,6 @@ main p {
 
 
 
-/*liの内側にピンクの線を引く---*/
-ul.in-line li {
-	box-sizing: border-box;
-	background-color:#fff;
-	padding: 4px;
-	border: 2px solid #E07A84;
-}
 
 
 
@@ -493,8 +498,7 @@ ul.in-line li {
 
 /*petがなくなったら---*/
 #pet h3 {color:#5F6C75;padding:0.5em; text-align:center; font-size:22px;}
-#pet h3 span {background-color:#CFECC4; display:block; padding-top:0.7em; width:2.7em; height:2em; margin:0 auto 5px auto; border-radius:50%;}
-
+#pet .box li p {text-align:left;}
 
 
 /*葬儀の流れ---*/
@@ -504,11 +508,8 @@ ul.in-line li {
   margin:0 0 1em 0;
   padding: 7px 10px;
   max-width: 100%;
-  font-size:18px;
   background: #F5F3ED;
   text-align:center;
-  font-family: 'm-plus-rounded',"serif";
-  font-weight:400;
   border-radius: 10px;
 }
 
@@ -524,70 +525,15 @@ ul.in-line li {
 }
 
 .nagare li:last-child:before { display:none;}
-#flow h3 {color:#5F6C75;padding:0.5em; text-align:center; font-size:22px; margin-bottom:0;}
-#flow h3 span {background-color:#87C16F; display:block; padding-top:0.7em; width:2.7em; height:2em; margin:0 auto 5px auto; border-radius:50%; color:#fff;}
+#flow h3 {color:#5F6C75;padding:0.5em; text-align:center; font-size:22px; margin-bottom:0.5em;}
+#pet h3 span,#flow h3 span {background-color:#5EC2DD; display:block; padding-top:0.7em; width:2.7em; height:2em; margin:0 auto 5px auto; border-radius:50%; color:#fff;}
 #flow .flow_list li { width:49%; margin:0 0.5% 1% 0.5%; border:4px solid #CFECC4;box-sizing: border-box;}
 
 
-/*ペット火葬プランと料金---*/
-#plan h4 {padding:10px;margin-bottom:0;margin-top:0; text-align:center;}
-#plan h4 span {font-size:0.6em; margin-left:1em; background-color:#e7ca3f; padding:1px 5px;	margin-bottom:0px;}
-#plan h6 { padding:2px; background-color:#5F6C75; margin-bottom:0px;}
-#plan li.flex_w33 div.btn {margin-top: auto; padding:1em;}
-.ph_ontxt img {width:100%;height:auto;}
-.ph_ontxt {position:relative;}
-.ph_ontxt h5 {
-    position: absolute;
-	bottom: 0;
-	width:100%;
-	padding:10px 0px;
-	color:#5F6C75;
-	background-color:rgba(255,255,255,0.8);
-	font-size:18px;
-	font-family: 'm-plus-rounded';
-	font-weight:700;
-	margin-bottom:0;
-	text-align: center;
-	line-height: 1;
-}
-.ph_ontxt p span {
-	font-size: 0.8em;
-	display: inline-block;
-}
 
-#plan dl, dl.list {display:flex;flex-direction: row;flex-wrap: wrap;align-content:stretch;}
-#plan dt, dl.list dt {width:20%; font-size:1.1em; text-align:center; border-top:2px solid #88bcee; padding-top:2px;}
-#plan dd, dl.list dd {width:80%; margin-bottom:1em;border-top:2px solid #88bcee; padding-top:3px;}
+/*プラン---*/
+#plan table h5 {border:solid 1px #87C16F; color:#5F6C75; padding:0.5em; margin:0.1em; background-color:#fff;}
 
-
-
-
-#plan .nagare li {
-  position: relative;
-  display: block;
-  margin: 1.5em 0;
-  padding: 7px 10px;
-  min-width: 120px;
-  max-width: 100%;
-  color: #FFF;
-  font-size:18px;
-  background: #88bcee;
-  text-align:center;
-    	font-family: 'm-plus-rounded',"serif";
-	font-weight:700;
-	border-radius: 10px;
-}
-
-#plan .nagare li:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -15px;
-  border: 15px solid transparent;
-  border-top: 15px solid #88bcee;
-
-}
 
 /*エリア---*/
 #area dt { color:#E07A84; font-size:1.2em; margin-bottom:0.2em;}
@@ -607,67 +553,15 @@ ul.in-line li {
 
 
 
-/*よくある質問---*/
-
-details {transition: 0.5s;}
-
-details {
-  transition: 0.5s;
-  margin-bottom:0.5em;
-  padding:0.5em;
-  background-color:#fff;
-}
-details[open] { background: #FFF;}
-
-details p {
-	padding:0.5em 0 0.5em 30px;
-	border-top:1px solid #87C16F;
-}
-
-summary {
-	border-left: 10px solid #87C16F;
-	padding:10px 20px;
-	text-align:left;
-	font-size:1.2em;
-	background-color:#fff;
-	font-weight: bold;
-	}
-
 
 
 	
-/*NEWS・会社概要---*/
-
-#news dd img { padding:0 0 1em 1em; height:150px; width:auto;}
-#news dt {
- padding:1em 0;
- border-top:2px solid #3d8f7a;
- font-size:1.2em;}		
-#news dt span {margin-right:1em;}
-#company dl.list dt {text-align:left;}
-#company dl.list dt,#company dl.list dd { border-color:#3d8f7a; padding:0.5em 0;}
-#link h5 { border-left:4px solid #3d8f7a; padding:0 0.5em}
-#link p {padding:0 3em 1em 0; font-size:0.9em;}
+/*会社概要---*/
+#company dl.list dt {text-align:left;border-left:5px solid #5EC2DD; font-weight:700; font-size:1.1em; }
+#company dl.list dt,#company dl.list dd { padding:0.5em;}
 
 
-/*エリアページ　7つの特徴---*/
 
-#facility  #features h4{color:#5F6C75; }
-#facility  #features p {background-color:#FAECEB;}
-#facility  #features p.txt_circle {background-color:#df827c;color:#FFF;padding:0; margin: auto;}
-#facility  #features .style01,#facility  #features .style02 {border:5px solid #FFF;}
-#facility .area h6{
-	font-size: 24px;
-	margin-bottom:0.5em;
-	font-weight: bold;
-	color:#df827c;
-}
-
-
-/*エリアページ　プラン---*/
-#area #plan h4 {background-color:#E07A84; color:#fff;}
-#area #plan ul.in-line li {border: 4px solid #fff;}
-#area #plan li.flex_w33 p { padding:0 1em}
 
 }
 
@@ -703,6 +597,9 @@ summary {
 }
 
 
+
+
+
 /*特色---*/
 
 #features li.flex_w25{border:0px; width:100%;margin-bottom:1em;}
@@ -710,29 +607,15 @@ summary {
 #features h3{ padding:0.5em; height:3em;}
 
 
-/*petがなくなったら---*/
-#pet ul.flex_25_ul li {width:100%; margin-right:0;}
-#pet h3 {padding:0.25em; font-size:16px;}
+
+/*葬儀の流れ---*/
+
+#flow h3 {font-size:18px; }
+#flow .nagare p {text-align:left;}
 
 
-	
-	
-/*ペット火葬プランと料金---*/
-
-#plan li.flex_w33,#plan li.flex_w25 {
-	border:0px; width:100%;
-	margin-bottom:2em;}
-	
-#plan li.flex_w33 p {height: auto}
-
-.ph_ontxt h5 {
-	padding:5px 0px;
-	font-size:14px;
-	margin-bottom:0px;
-	line-height: 1;
-}
-
-#plan dt,#plan dd,dl.list dt,dl.list dd {width:100%;}
+/*プラン---*/
+#plan table h5 { font-size:0.9em;height:2.5em;}
 
 /*エリア---*/
 .top #area img {width:50%; height:auto; margin:0 25%;}
@@ -835,7 +718,7 @@ summary {
 	text-align: center;
 	cursor: pointer;
 	z-index: 100;
-	background-color: #E07A84;
+	background-color: #5EC2DD;
 	align-items: center;
     justify-content: center;
 }
@@ -845,7 +728,7 @@ summary {
 	bottom:0;
 	text-align:center;
 	font-size:16px;
-	background:#F9D7DF;
+	background:#87C16F;
 	margin:0;
 	width: 90%;
 	height: 40px;
