@@ -1,47 +1,84 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+
+
+
+
+
 /*header
 ========================================*/
 
-#header {
-	width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 980;
-  background-color:#fff;
+#header {width: 100%;position: fixed;left: 0;top: 0;z-index: 980;background-color:#fff;}
+
+
+/* タイトル全体のボックス */
+ul.title {
+    list-style: none;
+    margin:0 5%;
+	padding:15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-#header ul.flex_container,#footer ul.flex_container {margin:0 5%;padding:15px 0;}
+/* 左側タイトル */
+.title_logo h1 {font-size:54px;color:#5F6C75;font-weight:900;}
+.title_logo h1 span {display:block;font-size:14px;color:#3d8f7a; margin:0 0 0.5em 1em;}
 
-#header a,#footer {font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:400;}
+/* 右側（電話番号） */
+.title_tel p {margin: 0; padding-bottom:0.5em;}
 
-.logo {width:100%;text-align:left;}
+/* 電話番号リンク */
+.title_tel p a {color:#5F6C75; font-size:36px;font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:400; margin-bottom:0.1em;}
+.title_tel p a:first-child {margin-left: 0;}
+
+/* アイコンと文字の間 */
+.title_tel i {font-size:28px; margin-right:0.2em; color:#E07A84;}
+.title_tel i a { margin-right:1em;}
+
+/* 営業時間ボックス（背景色＋白文字） */
+.title_tel .contact {padding:6px 10px;text-align:center;color:#fff;background-color:#E07A84;font-size:16px; display:block;}
 
 
+@media screen and (max-width:1280px) {
+
+.title_tel a {font-size:34px;}
+.title_tel span {font-size:12px;}
+.title_tel i {font-size:30px;}
+
+}
+
+
+
+@media screen and (max-width:768px) {
 	
-.logo img {
-	padding-left:20px;
-	width: auto;
-	height:100px;
-	float:left;
+#header {width: 100%;height: 58px;position: fixed;border:0px;}
+#header ul.title {margin:0;padding:0 0 0 0.5em;}
+.title_logo {width:100%; text-align:left;}
+.title_logo h1 {padding:10px 0;font-size:20px;}
+.title_logo h1 span {display:block;font-size:9px;margin:0 0 2px 2px;}
+.title_tel p a,.title_tel i {font-size:24px;}
+
 }
 
-.logo h1 {font-size:54px;color:#5F6C75;font-weight:400;}
 
 
-.logo h1 span {display:block;font-size:14px;color:#3d8f7a; margin:0 0 0.5em 1em;}
 
-.tel a {color:#5F6C75; font-size:42px;display:block;font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:400; margin-bottom:0.1em;}
-.tel span {font-size:16px; display:block;}
-.tel i {margin-right:5px; font-size:38px;}
-.tel .contact {
-	padding:6px 10px;
-	text-align:center;
-	color:#fff;
-	background-color:#E07A84;
-}
+
+
+
+
+
+
+
+
+
+
+/*メニュー
+========================================*/
 
 
 nav.gnav {margin-top:10px;}
@@ -67,6 +104,7 @@ nav.gnav {margin-top:10px;}
 	box-sizing: border-box;
 	margin:3px;
 	padding:1px 10px;
+	font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:700;
 }
 
 .gnav ul li a:hover {
@@ -77,71 +115,8 @@ nav.gnav {margin-top:10px;}
 
 
 
-@media screen and (max-width:1280px) {
-
-.tel a {font-size:34px;}
-.tel span {font-size:12px;}
-.tel i {font-size:30px;}
-
-
-}
-
 @media screen and (max-width:768px) {
 	
-#header {
-  width: 100%;
-	height: 58px;
-  position: fixed;
-  border:0px;
-}
-
-#header ul.flex_container {margin:0;padding:0 0 0 0.5em;}
-
-.page #header{
-	display:block;
-}
-
-.logo {
-	width:100%; text-align:left;
-}
-
-.logo h1 {
-	padding:10px 0;font-size:20px;}
-	
-.logo img {
-	padding-left:10px;
-	width: auto;
-	height:50px;
-}
-
-
-
-.logo h1 span {
-	display:block;
-	font-size:9px;
-	margin:0 0 2px 2px;}
-
-
-
-#header .contact {
-	margin:0 2em 0.5em 1em;
-	padding-top:1px;
-	height:20px;
-	width:90%;
-	text-align:center;
-	font-size:16px;
-	color:#fff;
-	background-color:#e48198;
-	border-radius:12px;
-}
-
-#header .contact i,#header .contact span {
-	font-size:10px;
-}
-
-
-
-
 
 
 
@@ -184,6 +159,7 @@ nav.gnav {margin-top:10px;}
     line-height: 1.5;
 	font-size:12px;
 	color:#FFF;
+	font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:700;
 }
 #menu li a:before{
 	content: "\f054";
