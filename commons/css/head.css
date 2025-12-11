@@ -32,7 +32,7 @@ ul.title {
 .title_tel p {margin: 0; padding-bottom:0.5em;}
 
 /* 電話番号リンク */
-.title_tel p a {color:#5F6C75; font-size:36px;font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:400; margin-bottom:0.1em;}
+.title_tel p a {color:#5F6C75; font-size:36px;font-family: 'ShipporiMincho',"serif";font-weight:400; margin-bottom:0.1em;}
 .title_tel p a:first-child {margin-left: 0;}
 
 /* アイコンと文字の間 */
@@ -97,14 +97,14 @@ nav.gnav {margin-top:10px;}
 	box-sizing:border-box;
 }
 .gnav > ul > li > a {
-	font-size:16px;
+	font-size:18px;
 	color: #FFF;
 	display: block;
 	text-align: center;
 	box-sizing: border-box;
 	margin:3px;
 	padding:1px 10px;
-	font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:700;
+	font-family: 'ZenKakuGothicNew',"Arial","sans-serif";font-weight:500;
 }
 
 .gnav ul li a:hover {
@@ -157,9 +157,9 @@ nav.gnav {margin-top:10px;}
     height: auto;
     text-align: left;
     line-height: 1.5;
-	font-size:12px;
+	font-size:16px;
 	color:#FFF;
-	font-family: 'ShipporiMincho',"Arial","sans-serif";font-weight:700;
+	font-family: 'ZenKakuGothicNew',"Arial","sans-serif";font-weight:500;
 }
 #menu li a:before{
 	content: "\f054";
