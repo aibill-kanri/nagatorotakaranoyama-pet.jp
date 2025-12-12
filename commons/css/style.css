@@ -31,7 +31,15 @@
 	font-display: swap;
 }
 
-
+/* ZenKakuGothicNew-Bold */
+@font-face {
+	font-family: 'ZenKakuGothicNew';
+	font-weight:700;
+	font-style:normal;
+	src: url('/commons/webfonts/ZenKakuGothicNew-Bold.woff2') format('woff2'),
+	url('/commons/webfonts/ZenKakuGothicNew-Bold.ttf') format('truetype');
+	font-display: swap;
+}
 
 
 html {
@@ -50,8 +58,8 @@ body {
 }
 
 h1 {
-	font-family: 'ShipporiMincho',"serif";
-	font-weight:700;
+	font-family: 'ZenKakuGothicNew',"Arial","sans-serif";
+	font-weight:500;
 }
 
 
@@ -84,7 +92,7 @@ a:hover img {
 }
 
 
-
+main img { border-radius:10px;}
 
 
 
@@ -101,7 +109,7 @@ i {text-decoration: none;}
 	box-sizing: border-box;
 	background-color: #5EC2DD;
 	text-align: center;
-	font-family: 'ShipporiMincho',"sans-serif";
+	font-family: 'ZenKakuGothicNew',"Arial","sans-serif";
 	font-weight:700;
 	border-radius: 1.25em;
 	padding: .5em 1em;
@@ -112,7 +120,7 @@ i {text-decoration: none;}
 	border:2px solid #5EC2DD;
 	width:50%;
 	height:2.5em;
-	margin:0 auto;
+	margin:1.5em auto;
 }
 .btn a:hover {color:#5EC2DD;background-color: #FFF;}
 
@@ -138,7 +146,7 @@ a[href^="tel:"] {
 @media screen and (max-width:768px) {
 body {font-size: 15px;}
 .only-pc {display: none !important;}
-.innr {width: 92%;}
+.innr {width: 96%;}
 
 #header {position: fixed;z-index: 10;}
 
@@ -148,27 +156,16 @@ body {font-size: 15px;}
 /*ボタン*/
 .btn a {width:100%; font-size:16px;}
 
-
+h2,h3 ,h4 ,h5 ,h6 {font-weight:700;}
 	
 }
 
-@media screen and (max-width:480px) {
-.logo img {
-	top:5px;
-	width:50%;
-	height:auto;
-}
 
-#header-contact i{
-	margin:0.5em 0;
-}
-
-}
 
 /*contents
 ========================================*/
 
-section,.in section{padding:60px 0;}
+section{ padding:60px 0;}
 
 
 
@@ -229,9 +226,10 @@ main h2::after {
   display: block;
   width: 50%;              /* ラインの長さ */
   height: 2px;              /* ラインの太さ */
-  background-color: #5EC2DD;   /* ラインの色 */
+  background-color: #87C16F;   /* ラインの色 */
   margin: 30px auto;         /* 見出し上下の間隔と中央寄せ */
 }
+
 
 
 main h2 span {
@@ -243,27 +241,28 @@ main h2 span {
 
 
 
-main .bg_beige h2::before,
-main .bg_beige h2::after {background-color: #87C16F;   /* ラインの色 */}
-main .bg_beige .box li div {background-color:#fff;}
+
+/* H2 ラインの色 */
+main h2.h2_pink::before,main h2.h2_pink::after {background-color: #E07A84; }
+
 
 
 main h3 {
 	font-size: 32px;
 	margin-bottom:1em;
-	color:#5F6C75;
+	color:#5B7F4A;
 }
 
 main h4{
 	font-size: 24px;
 	margin-bottom:0.5em;
-	color:#5F6C75;
-	border-left:5px solid #5EC2DD;
+	color:#5B7F4A;
+	border-left:5px solid #87C16F;
 	padding:0.25em 0 0.25em 0.5em;
 	text-align:left;
 }
 
-main .bg_beige h4 { border-color:#87C16F;}
+
 
 
 main h4 span{font-size:0.6em;}
@@ -275,14 +274,13 @@ main h5{
 	color:#E07A84;
 }
 
-main h6{ padding:2 0;}
+main h6{font-size: 22px;color:#7F4752;margin:0.5em 0;}
 
 main p {line-height:1.7; margin-bottom:0.5em;}
 
-/*中ページ*/
 
-.in h4{margin:0.5em 0;}
-.in h5,.in h6{margin:0.5em 0;}
+
+
 
 
 
@@ -294,24 +292,15 @@ main p {line-height:1.7; margin-bottom:0.5em;}
 
 .lead {font-size:1.2em;line-height:1.75em; text-align:center;}
 
-.freame{
-	border-radius: 10px; padding:1.5em;}
-
-.img_freame {
-	border:solid 5px #fff;
-}
-	
-
-.ph_circle {
-	border-radius:50%;
-}
-
+.freame,
+.box li div{border-radius: 10px; padding:1.5em;}
 .box li {padding-bottom:1em;}
-.box li div {padding:1.5em; background-color:#F5F3ED; border-radius:10px; height:100%;box-sizing: border-box;  }
+.box li div {background-color:#F5F3ED;height:100%;box-sizing: border-box;  }
 .box li div p {line-height:1.5; font-size:0.95em; margin-top:1em;}
 
+.d-ib {display: inline-block;}
 
-
+/* テーブル */
 table.table,.table td,.table th {
     border-collapse: collapse;
     border:1px solid #F5F3ED;
@@ -325,15 +314,27 @@ table.table,.table td,.table th {
 
 table.houyou-table,
 table.houyou-table th,
-table.houyou-table td {
-    text-align: center;
-}
-table.houyou-table td:nth-child(1) {
-    text-align: left;   
-}
+table.houyou-table td {text-align: center;}
+table.houyou-table td:nth-child(1) {text-align: left;   }
+
+/* dlリスト */
+dl.list dt {text-align:left;border-left:5px solid #87C16F; font-size:1.1em; color:#5B7F4A;}
+dl.list dt,dl.list dd { padding:0.5em;}
 
 
-.d-ib {display: inline-block;}
+
+
+/* 背景がベージュの時 */
+.bg_beige h2::before,
+.bg_beige h2::after { background-color: #5EC2DD;}
+.bg_beige .box li div,
+.bg_beige div.freame  {background-color:#fff;}
+.bg_beige h4{border-color:#5EC2DD; color:#37727F;}
+.bg_beige dl.list dt { border-color:#5EC2DD; color:#37727F;}
+.bg_beige h3{ border-color:#5EC2DD; font-weight:700; color:#37727F;}
+
+
+
 
 @media screen and (max-width:1024px) {
 	.table td,.table th {font-size:0.7em;}
@@ -346,14 +347,14 @@ table.houyou-table td:nth-child(1) {
 	top: 58px;
 }
 
-section,.in section{padding:30px 3%;}
+section{ padding:2%; 0}
 
 main h1,.in h1{
 	font-size: 26px;
 	margin-bottom:20px;
 }
 
-main h2 {font-size: 20px; padding-bottom:0.2em;}
+main h2 {font-size: 22px; padding-bottom:0.2em;margin:0 0 3% 0;}
 
 main h2::before,
 main h2::after {margin: 1em auto;}
@@ -361,7 +362,7 @@ main h2::after {margin: 1em auto;}
 main h3{
 	font-size: 19px;
 	margin-bottom:20px;
-	border-bottom:2px solid #F9D7DF;
+	border-bottom:2px solid #FFF;
 	padding:0.5em 0;	
 }
 
@@ -377,7 +378,7 @@ main h5{
 	background-color:#F5F3ED;
 }
 
-
+main h6{font-size: 16px;}
 
 main p {
 	margin-bottom: 0.5em;
@@ -396,22 +397,10 @@ main p {
 
 .freame,.box li div{padding:3%;}
 
-.img_freame {
-	border:solid 2px #fff;
-	box-shadow: 0px 0px 4px -2px #c7c7c7;
-	border-radius: 0px;
-}
 
-.img_sp100 { width:100%; height:auto;}
 
 }	
 
-
-/*Top*/
-
-.top section{
-	padding:60px 0;
-}
 
 
 
@@ -474,12 +463,11 @@ main p {
 
 
 /*petがなくなったら---*/
-#pet h3 {color:#5F6C75;padding:0.5em; text-align:center; font-size:22px;}
 #pet .box li p {text-align:left;}
 
 
 /*葬儀の流れ---*/
-.nagare li {
+#flow .nagare li {
   position: relative;
   display: block;
   margin:0 0 1em 0;
@@ -491,9 +479,9 @@ main p {
   border-radius: 10px;
 }
 
-.flex_50_ul .nagare li{width:95%;}
 
-.nagare li:before {
+
+#flow .nagare li:before {
   content: "";
   position: absolute;
   top: 100%;
@@ -504,15 +492,16 @@ main p {
 
 }
 
-.nagare li:last-child:before { display:none;}
-#flow h3 {color:#5F6C75;padding:0.5em; text-align:center; font-size:22px; margin-bottom:0.5em;}
+#flow .nagare li:last-child:before { display:none;}
+#pet h3,
+#flow .nagare h3 {color:#E07A84;padding:0.5em; text-align:center; font-size:22px; margin-bottom:0.5em; font-weight:500;}
 #pet h3 span,#flow h3 span {background-color:#E07A84; display:block; padding-top:0.7em; width:2.7em; height:2em; margin:0 auto 5px auto; border-radius:50%; color:#fff;}
 #flow .flow_list li { width:49%; margin:0 0.5% 1% 0.5%; border:4px solid #CFECC4;box-sizing: border-box;}
 
 
 
 /*プラン---*/
-#plan table h5 {border:solid 1px #87C16F; color:#5F6C75; padding:0.5em; margin:0.1em; background-color:#fff;}
+#plan table h5 {color:#fff; padding:0.5em; margin:0.1em; background-color:#5EC2DD; border-radius:10px;}
 
 
 /*エリア---*/
@@ -536,9 +525,7 @@ main p {
 
 
 	
-/*会社概要---*/
-#company dl.list dt {text-align:left;border-left:5px solid #5EC2DD; font-size:1.1em; }
-#company dl.list dt,#company dl.list dd { padding:0.5em;}
+
 
 
 
@@ -563,18 +550,6 @@ main p {
 	padding:0 0.5em;
 	line-height:1;
 }
-.top h1 img{
-	width:90%;
-	height:auto;
-}
-
-.top section{
-    padding:40px 0;
-}
-.top h2{
-	font-size: 26px;
-    margin-bottom:20px;
-}
 
 
 
@@ -589,7 +564,7 @@ main p {
 
 
 /*葬儀の流れ---*/
-
+#flow .nagare li {width:94%;}
 #flow h3 {font-size:18px; }
 #flow .nagare p {text-align:left;}
 
